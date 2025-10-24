@@ -111,6 +111,7 @@ pip install spacy networkx pandas matplotlib
 python -m spacy download en_core_web_sm
 
 # Run the pipeline
+cd src
 python test.py
 
 # View results in browser (automatically opens)
