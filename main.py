@@ -863,7 +863,7 @@ def print_evaluation_summary(evaluation: Dict[str, Any]):
 
 
 # --- Execution to read from multiple files ---
-FILE_NAMES = ["1.txt", "2.txt", "3.txt"] # Make sure these files exist
+FILE_NAMES = ["text/1.txt", "text/2.txt", "text/3.txt"] # Make sure these files exist
 
 # Optional: Define ground truth for evaluation
 GROUND_TRUTH = {
