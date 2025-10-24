@@ -309,55 +309,11 @@ For research and benchmarking:
 | **Negation** | Not handled | "not organized" → still scores high |
 | **Sarcasm** | Not detected | Misinterprets ironic statements |
 
-### Roadmap
-
-- [ ] 🤖 Integrate transformer-based coreference resolution (AllenNLP, NeuralCoref)
-- [ ] 🧠 Add sentiment analysis for personality refinement
-- [ ] 🌐 Support for multilingual documents
-- [ ] 📊 Real-time streaming analysis
-- [ ] 🎨 Enhanced visualization with D3.js
-- [ ] 🔍 Implicit relation extraction using deep learning
-- [ ] 💾 Neo4j database integration for large-scale graphs
-- [ ] 🔄 Active learning for keyword expansion
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💍 Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🎉 Open a Pull Request
-
-**Areas needing help:**
-- Improving coreference resolution
-- Adding domain-specific personality keywords
-- Expanding test coverage
-- Optimizing graph layout algorithms
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **spaCy Team**: For the excellent NLP framework
-- **NetworkX**: For powerful graph algorithms
-- **vis.js**: For beautiful interactive visualizations
-- **Big Five Research**: Psychology community for OCEAN model
-
 ---
 
 ## 📧 Contact & Support
 
-- **Author**: [Your Name]
+- **Author**: Derick Amadeus Budiono
 - **Repository**: [Knowledge-Graph-Challenge](https://github.com/DerickAmadeus/Knowledge-Graph-Challenge)
 - **Issues**: [Report bugs](https://github.com/DerickAmadeus/Knowledge-Graph-Challenge/issues)
 - **Discussions**: [Q&A and Ideas](https://github.com/DerickAmadeus/Knowledge-Graph-Challenge/discussions)
@@ -382,10 +338,6 @@ Personality Traits: 5 (Big Five)
 If you find this project useful, please consider giving it a star ⭐!
 
 ---
-
-<div align="center">
-
-**Made with ❤️ using Python & spaCy**
 
 [⬆ Back to Top](#-knowledge-graph-construction-with-personality-modeling)
 
