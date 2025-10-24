@@ -156,12 +156,20 @@ def create_canonical_name_map(doc: spacy.tokens.Doc) -> Dict[str, str]:
         for p in ['He', 'Him', 'His', 'he', 'him', 'his']: variation_to_canonical_map[p] = male_target
     if female_target:
         for p in ['She', 'Her', 'Hers', 'she', 'her', 'hers']: variation_to_canonical_map[p] = female_target
+    
+    # Generic "they/them/their" - map to most recently mentioned person or first person found
+    if canonical_names_found:
+        # Prefer singular "they" to map to the first/main person in the document
+        generic_target = canonical_names_found[0] if len(canonical_names_found) > 0 else None
+        if generic_target:
+            for p in ['They', 'Them', 'Their', 'Theirs', 'they', 'them', 'their', 'theirs']:
+                variation_to_canonical_map[p] = generic_target
         
-    # Collective Pronoun (Simple placeholder)
-    if len(canonical_names_found) > 1:
-        compound_name = " and ".join(canonical_names_found[:2]) # Just use first two identified
-        variation_to_canonical_map['Their'] = compound_name
-        variation_to_canonical_map['their'] = compound_name
+    # Legacy: Collective Pronoun (kept for backwards compatibility, but less common now)
+    # if len(canonical_names_found) > 1:
+    #     compound_name = " and ".join(canonical_names_found[:2])
+    #     variation_to_canonical_map['Their'] = compound_name
+    #     variation_to_canonical_map['their'] = compound_name
         
     # Handle compound names created by previous pronoun step (e.g., "Elias Vance and Prof...")
     # Map them back to a reasonable representation or remove if too complex
