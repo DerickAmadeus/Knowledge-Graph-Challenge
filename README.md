@@ -78,7 +78,6 @@ Infers **Big Five (OCEAN)** personality traits:
 See [EVALUATION_METRICS.md](EVALUATION_METRICS.md) for detailed documentation.
 
 ### 🎨 **Visualization**
-- **Interactive HTML**: Powered by vis.js network visualization
 - **Color-coded nodes**: Person (blue), Trait (green), Concept (gold), etc.
 - **Labeled edges**: Relationship types with scores
 - **Responsive layout**: Spring-layout algorithm for optimal positioning
@@ -94,7 +93,6 @@ See [EVALUATION_METRICS.md](EVALUATION_METRICS.md) for detailed documentation.
 | **NetworkX** | Graph construction | Latest |
 | **Matplotlib** | Static visualization | Latest |
 | **Pandas** | Evaluation reports | Latest |
-| **vis.js** | Interactive HTML graphs | 9.1.2 |
 
 ---
 
@@ -114,11 +112,8 @@ pip install spacy networkx pandas matplotlib
 python -m spacy download en_core_web_sm
 
 # Run the pipeline
-cd src
-python test.py
-
-# View results in browser (automatically opens)
-# knowledge_graph_1.html, knowledge_graph_2.html, knowledge_graph_3.html
+python main.py
+and the result is automatically popped up
 ```
 
 ### 1️⃣ Prerequisites
@@ -142,10 +137,11 @@ python -m spacy download en_core_web_sm
 Create text files with your documents:
 ```
 project/
-├── test.py
-├── 1.txt          # Your first document
-├── 2.txt          # Your second document
-└── 3.txt          # Your third document
+├── main.py
+├── text
+     ├── 1.txt          # Your first document
+     ├── 2.txt          # Your second document
+     └── 3.txt          # Your third document
 ```
 
 **Example content** (`1.txt`):
@@ -157,7 +153,7 @@ She often leads meetings and enjoys collaborating with her colleagues.
 ### 4️⃣ Run the Pipeline
 
 ```bash
-python test.py
+python main.py
 ```
 
 ### 5️⃣ View Results
@@ -176,19 +172,11 @@ python test.py
   * Intrinsic Score: 94.1/100
 ```
 
-**Generated Files:**
-- `knowledge_graph_1.html` - Interactive visualization
-- `knowledge_graph_2.html` - Second document graph
-- `knowledge_graph_3.html` - Third document graph
-- `evaluation_report.csv` - Comprehensive metrics
-
----
-
 ## ⚙️ Configuration
 
 ### Personality Keywords
 
-Edit `DEFAULT_TRAIT_CLUES` in `test.py`:
+Edit `DEFAULT_TRAIT_CLUES` in `main.py`:
 
 ```python
 DEFAULT_TRAIT_CLUES = {
@@ -254,7 +242,7 @@ INTRINSIC SCORE: 94.1/100 ⭐⭐⭐⭐⭐
 
 ```
 Intellumina/
-├── test.py                    # Main pipeline script
+├── main.py                    # Main pipeline script
 ├── 1.txt, 2.txt, 3.txt       # Input documents
 ├── knowledge_graph_*.html     # Generated visualizations
 ├── evaluation_report.csv      # Metrics summary
