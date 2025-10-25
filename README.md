@@ -1,5 +1,8 @@
 # 📚 Knowledge Graph Construction with Personality Modeling
 
+
+LLM Sessions : https://gemini.google.com/share/4bf368e3dbbf
+
 > Automated pipeline for extracting knowledge graphs from unstructured text with Big Five personality trait inference
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
